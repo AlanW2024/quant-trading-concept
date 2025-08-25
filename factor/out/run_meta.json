@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-08-25T11:43:10.198911Z",
+  "params": {
+    "price_cache_path": "c:\\Users\\PC\\Desktop\\AI Project\\algo trading\\price_cache_1995-01-01_to_2024-12-31_507_tickers.csv",
+    "fundamentals_cache_path": "c:\\Users\\PC\\Desktop\\AI Project\\algo trading\\fundamentals_cache_503_tickers.json",
+    "out_dir": "C:\\Users\\PC\\Desktop\\AI Project\\algo trading\\factor\\out",
+    "benchmark": "QQQ",
+    "start_date": "1999-01-01",
+    "end_date": "2024-12-31",
+    "min_history_days": 252,
+    "ipo_seasoning_days": 60,
+    "enable_qv": false,
+    "factor_weights": "(1.0, 0.0)",
+    "top_n": 50,
+    "mom_lookback_days": 252,
+    "mom_skip_days": 20,
+    "max_weight": 0.05,
+    "target_vol": 0.1,
+    "vol_window": 20,
+    "leverage_cap": 3.0,
+    "rebalance_band": 0.005,
+    "tc_bps": 15.0,
+    "adv_csv": null,
+    "min_adv_usd": null,
+    "walk_forward": false,
+    "wf_split": null
+  },
+  "price_shape": [
+    6540,
+    507
+  ],
+  "date_range": [
+    "1999-01-04 00:00:00",
+    "2024-12-30 00:00:00"
+  ],
+  "libs": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0"
+  }
+}
