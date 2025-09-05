@@ -12,8 +12,17 @@ def _pro_exists() -> bool:
     ).exists()
 
 
+def _deps_ok() -> bool:
+    try:
+        import numpy  # noqa: F401
+        # 可視情況加：import pandas  # noqa: F401
+    except Exception:
+        return False
+    return True
+
+
 @pytest.mark.smoke
-@pytest.mark.skipif(not _pro_exists(), reason="pro engine not present")
+@pytest.mark.skipif(not (_pro_exists() and _deps_ok()), reason="pro engine or deps not present")
 def test_run_engine_help_exit_zero():
     root = pathlib.Path(__file__).resolve().parents[1]
     ret = subprocess.call([sys.executable, str(root / "run_engine.py"), "--help"])
