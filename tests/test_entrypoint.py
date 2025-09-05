@@ -1,4 +1,3 @@
-# tests/test_entrypoint.py
 import pathlib
 import subprocess
 import sys
