@@ -22,7 +22,8 @@ def _deps_ok() -> bool:
         return False
 
 
-@pytest.mark.smoke @pytest.mark.skipif(
+@pytest.mark.smoke
+@pytest.mark.skipif(
     not (_pro_exists() and _deps_ok()),
     reason="pro engine or deps not present",
 )
