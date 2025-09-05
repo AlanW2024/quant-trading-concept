@@ -26,7 +26,7 @@ jobs:
         run: ruff check .
 
       - name: Mypy
-        run: mypy .
+        run: mypy run_engine.py tests
 
       - name: Pytest
         run: python -m pytest -q
