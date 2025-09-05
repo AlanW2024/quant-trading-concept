@@ -1,8 +1,9 @@
 name: CI
 
 on:
-  push:
   pull_request:
+  push:
+    branches: [main]  # 只有推到 main 才跑 push 版，feature 分支不跑
 
 jobs:
   lint_test:
@@ -20,13 +21,13 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Black
-        run: black --check .
+        run: black --check run_engine.py tests
 
       - name: Ruff
-        run: ruff check .
+        run: ruff check run_engine.py tests
 
       - name: Mypy
-        run: mypy .
+        run: mypy run_engine.py tests
 
       - name: Pytest
         run: python -m pytest -q

@@ -1,3 +1,25 @@
+## Quickstart
+
+1) Install
+```bash
+pip install -r requirements.txt  # 若無此檔可略過
+pip install pre-commit && pre-commit install
+```
+
+2. Run (choose one)
+
+```bash
+./scripts/run_pro.sh           # Linux/Mac
+# or
+pwsh ./scripts/run_pro.ps1     # Windows (PowerShell 7+)
+```
+
+Notes:
+
+* 這是「一鍵入口」，**不會**自動產生假資料；若需回測，請自行提供合法的 `--prices` 檔或在 `.env` 設定參數。
+* 設定 `RUN_ENGINE_VERBOSE=1` 可印出 run_engine 實際使用的引擎路徑。
+* 用 `OUT=out_custom ./scripts/run_pro.sh` 可自訂輸出資料夾。
+
 # 量化交易策略的進化、失敗與頓悟 (2015-2024)
 
 ## 專案總結 (STAR Principle)
