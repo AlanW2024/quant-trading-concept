@@ -15,6 +15,7 @@ def _pro_exists() -> bool:
 def _deps_ok() -> bool:
     try:
         import numpy  # noqa: F401
+
         # 可視情況加：import pandas  # noqa: F401
     except Exception:
         return False
