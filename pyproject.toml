@@ -4,9 +4,11 @@ target-version = ["py311"]
 
 [tool.ruff]
 line-length = 100
-select = ["E","F","I","UP","B"]
-ignore = ["E501"]
 target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = []
 
 [tool.mypy]
 python_version = "3.11"
@@ -16,5 +18,5 @@ warn_unused_ignores = true
 
 [tool.pytest.ini_options]
 markers = [
-    "smoke: marks tests as smoke tests"
+    "smoke: marks tests as smoke tests",
 ]

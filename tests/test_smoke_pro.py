@@ -1,9 +1,16 @@
-import subprocess, sys, pathlib, pytest
+import pathlib
+import subprocess
+import sys
+
+import pytest
+
 
 def _pro_exists() -> bool:
     root = pathlib.Path(__file__).resolve().parents[1]
-    return (root / "src/factor/professional_multifactor_engine_pro.py").exists() or \
-           (root / "factor/professional_multifactor_engine_pro.py").exists()
+    return (root / "src/factor/professional_multifactor_engine_pro.py").exists() or (
+        root / "factor/professional_multifactor_engine_pro.py"
+    ).exists()
+
 
 @pytest.mark.smoke
 @pytest.mark.skipif(not _pro_exists(), reason="pro engine not present")

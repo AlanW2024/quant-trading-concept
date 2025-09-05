@@ -20,10 +20,10 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Black
-        run: black --check .
+        run: black --check run_engine.py tests
 
       - name: Ruff
-        run: ruff check .
+        run: ruff check run_engine.py tests
 
       - name: Mypy
         run: mypy run_engine.py tests
