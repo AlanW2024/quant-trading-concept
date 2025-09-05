@@ -1,8 +1,9 @@
 name: CI
 
 on:
-  push:
   pull_request:
+  push:
+    branches: [main]  # 只有推到 main 才跑 push 版，feature 分支不跑
 
 jobs:
   lint_test:
